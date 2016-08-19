@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">    
+    <meta name="author" content="Peterson F.">
+
+    <title>Formulario de contacto con PHP + HTML </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+ <div class="container">
+
+
+            <h2 class="mb-sm mt-sm"><strong>Contacto</strong></h2>
+            <form id="contactFormAdvanced" action="/mail/enviar.php"  method="POST" enctype="multipart/form-data">
+                <input type="hidden" value="true" name="emailSent" id="emailSent">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <label>Tu nombre *</label>
+                            <input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Tu Email *</label>
+                            <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label>Asunto</label>
+                            <input type="text" value="" data-msg-required="Please enter your subject."  class="form-control" name="subject" id="subject" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class"form-group">
+                    <div class="col-md-12">
+                        <label>Mensaje</label>
+                        <textarea data-msg-required="Please enter your Message." class="form-control" id="mensaje" name="mensaje" placeholder="Mensaje" required=""></textarea>
+                        </div>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="submit" id="contactFormSubmit" value="Enviar mensaje" class="btn btn-primary btn-lg pull-right" data-loading-text="Loading...">
+                    </div>
+                </div>
+            </form>
+        </div>
+        </div>
+           <!-- javascript para confirmar datos del formulario.
+    ================================================== -->
+    <!-- La página carga más rapido si estan situados al final del documento. -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>
